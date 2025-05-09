@@ -1,13 +1,15 @@
+import { Ref } from "react";
 
-export default function About() {
+interface AboutProps{
+    ref: Ref<HTMLDivElement> | undefined;
+}
+
+export default function About({ref}: AboutProps) {
 
   return (
-    <section className="flex justify-center items-center">
-      <div className="flex flex-col md:flex-row items-center gap-12 max-w-5xl w-full">
-        
-        {/* Text Section */}
+      <section ref={ref} className="flex flex-col md:flex-row items-center gap-12 max-w-5xl w-full">
         <div className="text-center md:text-left md:w-1/2 space-y-6">
-          <h1 className="text-white text-5xl md:text-6xl font-bold leading-tight">
+          <h1 className="text-zinc-300 text-5xl md:text-6xl font-sans font-extrabold leading-tight">
             About me
           </h1>
           <p className="text-zinc-300 text-lg md:text-xl font-light">
@@ -18,7 +20,6 @@ export default function About() {
           </p>
         </div>
 
-        {/* Image Section */}
         <div className="md:w-1/2 flex justify-center">
           <img
             className="border-3 border-solid bg-gradient-to-r bg-teal-300 to-blue-600 border-transparent max-w-md w-full h-auto rounded-lg object-cover"
@@ -26,8 +27,6 @@ export default function About() {
             alt="Gallery preview of a marketing UI component"
           />
         </div>
-
-      </div>
-    </section>
+      </section>
   );
 }

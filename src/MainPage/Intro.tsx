@@ -1,13 +1,10 @@
-import { Ref } from "react";
-
 interface IntroProps{
-    ref: Ref<HTMLDivElement> | undefined;
+    handleNext: () => void;
 }
-
-export default function Intro({ref}: IntroProps) {
+export default function Intro({handleNext}: IntroProps) {
 
     return (
-        <div ref={ref} className="flex flex-col items-center text-center space-y-12">
+        <section className="flex flex-col items-center text-center space-y-12 pt-50">
             <h2 className="self-start text-gray-200 text-3xl md:text-4xl font-light tracking-wide">
                 Hi! My name is
             </h2>
@@ -17,6 +14,12 @@ export default function Intro({ref}: IntroProps) {
             <h2 className="text-gray-200 text-2xl md:text-4xl font-medium italic max-w-2xl leading-relaxed">
                 I am a <span className="text-blue-400 font-semibold">passionate</span> software developer always looking for opportunities to learn and improve my development skills.
             </h2>
-        </div>
+            <span 
+                className="text-white lg:mt-40 s:mt-30 transform animate-bounce transition-all"
+                onClick={handleNext}
+            >
+                V
+            </span>
+        </section>
     );
 }

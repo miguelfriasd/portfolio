@@ -7,12 +7,22 @@ import MainPage from './MainPage/';
 function App() {
     const [showSidebarMenu, setShowSidebarMenu] = useState(false);
     const cursorRef = useRef<HTMLDivElement | null>(null);
-    const introRef = useRef<HTMLDivElement | null>(null);
+    const aboutRef = useRef<HTMLDivElement | null>(null);
+    const toolsRef = useRef<HTMLDivElement | null>(null);
+
+    const handleAboutClick = useCallback(() => {
+        if(aboutRef.current){
+            aboutRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+    }, []);
+
+    const handleToolsClick = useCallback(() => {
+        if(toolsRef.current){
+            toolsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    }, []);
 
     const handleLogoClick = useCallback(() => {
-        //if(introRef.current){
-        //    introRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
-        //}
         window.scrollTo({top: 0, behavior: 'smooth'});
     }, []);
 
@@ -51,9 +61,9 @@ function App() {
 
     return (
         <div>
-            <MainPage introRef={introRef}/>
+            <MainPage aboutRef={aboutRef} toolsRef={toolsRef} handleAboutClick={handleAboutClick}/>
             {showSidebarMenu && <SidebarMenu onClose={handleMenuClose} />}
-            <Header onLogoClick={handleLogoClick} onMenuButtonClick={handleMenuButtonClick} />
+            <Header onAboutClick={handleAboutClick} onToolsClick={handleToolsClick} onLogoClick={handleLogoClick} onMenuButtonClick={handleMenuButtonClick} />
             {/* Cursor element */}
             <div ref={cursorRef} className="cursor-trail"></div>
         </div>
