@@ -18,13 +18,13 @@ export default function SidebarMenu({ onClose }: SidebarMenuProps) {
             >
                 {/* Header */}
                 <div className="flex justify-between items-center px-6 py-4 border-b border-zinc-700">
-                    <h1 className="text-lg font-semibold text-white">Menu</h1>
+                    <img src="/logo.png" alt="Menu"/ >
                     <button 
                         onClick={onClose} 
                         className="text-white text-xl p-2 rounded-md hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-white"
                         aria-label="Close menu"
                     >
-                        ✕
+                        X
                     </button>
                 </div>
 

@@ -2,10 +2,12 @@ interface HeaderProps{
     onMenuButtonClick: () => void;
     onLogoClick: () => void;
     onAboutClick: () => void;
+    onProjectsClick: () => void;
     onToolsClick: () => void;
+    onContactClick: () => void;
 }
 
-export default function Header({ onMenuButtonClick, onLogoClick, onAboutClick, onToolsClick}: HeaderProps) {
+export default function Header({ onMenuButtonClick, onLogoClick, onAboutClick, onProjectsClick, onToolsClick, onContactClick}: HeaderProps) {
 
     return (
 
@@ -20,9 +22,11 @@ export default function Header({ onMenuButtonClick, onLogoClick, onAboutClick, o
       <div className="hidden md:flex gap-3">
         <span onClick={onAboutClick} className="text-gray-300 font-thin text-3xl transition-all hover:text-gray-500">About</span>
         <span className="text-gray-300 font-thin text-3xl">|</span>
+        <span onClick={onProjectsClick} className="text-gray-300 font-thin text-3xl transition-all hover:text-gray-500">Projects</span>
+        <span className="text-gray-300 font-thin text-3xl">|</span>
         <span onClick={onToolsClick} className="text-gray-300 font-thin text-3xl transition-all hover:text-gray-500">Tools</span>
         <span className="text-gray-300 font-thin text-3xl">|</span>
-        <span className="text-gray-300 font-thin text-3xl transition-all hover:text-gray-500">Contact</span>
+        <span onClick={onContactClick} className="text-gray-300 font-thin text-3xl transition-all hover:text-gray-500">Contact</span>
       </div>
 
       {/* Button (visible below md) */}

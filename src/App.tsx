@@ -8,7 +8,9 @@ function App() {
     const [showSidebarMenu, setShowSidebarMenu] = useState(false);
     const cursorRef = useRef<HTMLDivElement | null>(null);
     const aboutRef = useRef<HTMLDivElement | null>(null);
+    const projectsRef = useRef<HTMLDivElement | null>(null);
     const toolsRef = useRef<HTMLDivElement | null>(null);
+    const contactRef = useRef<HTMLDivElement | null>(null);
 
     const handleAboutClick = useCallback(() => {
         if(aboutRef.current){
@@ -16,9 +18,21 @@ function App() {
         }
     }, []);
 
+    const handleProjectsClick = useCallback(() => {
+        if(projectsRef.current){
+            projectsRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+    }, []);
+
     const handleToolsClick = useCallback(() => {
         if(toolsRef.current){
             toolsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    }, []);
+
+    const handleContactClick = useCallback(() => {
+        if(contactRef.current){
+            contactRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
         }
     }, []);
 
@@ -61,9 +75,22 @@ function App() {
 
     return (
         <div>
-            <MainPage aboutRef={aboutRef} toolsRef={toolsRef} handleAboutClick={handleAboutClick}/>
+            <MainPage 
+                aboutRef={aboutRef} 
+                projectsRef={projectsRef} 
+                toolsRef={toolsRef}
+                contactRef={contactRef} 
+                handleAboutClick={handleAboutClick}
+            />
             {showSidebarMenu && <SidebarMenu onClose={handleMenuClose} />}
-            <Header onAboutClick={handleAboutClick} onToolsClick={handleToolsClick} onLogoClick={handleLogoClick} onMenuButtonClick={handleMenuButtonClick} />
+            <Header 
+                onAboutClick={handleAboutClick} 
+                onProjectsClick={handleProjectsClick} 
+                onToolsClick={handleToolsClick} 
+                onContactClick={handleContactClick} 
+                onLogoClick={handleLogoClick} 
+                onMenuButtonClick={handleMenuButtonClick} 
+            />
             {/* Cursor element */}
             <div ref={cursorRef} className="cursor-trail"></div>
         </div>
