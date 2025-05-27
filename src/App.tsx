@@ -14,13 +14,13 @@ function App() {
 
     const handleAboutClick = useCallback(() => {
         if(aboutRef.current){
-            aboutRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+            aboutRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
         }
     }, []);
 
     const handleProjectsClick = useCallback(() => {
         if(projectsRef.current){
-            projectsRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+            projectsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
         }
     }, []);
 

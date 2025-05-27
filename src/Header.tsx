@@ -19,20 +19,17 @@ export default function Header({ onMenuButtonClick, onLogoClick, onAboutClick, o
     {/* Right side container */}
     <div className="ml-auto flex items-center gap-3">
       {/* Menu spans (visible on md+) */}
-      <div className="hidden md:flex gap-3">
-        <span onClick={onAboutClick} className="text-gray-300 font-thin text-3xl transition-all hover:text-gray-500">About</span>
-        <span className="text-gray-300 font-thin text-3xl">|</span>
-        <span onClick={onProjectsClick} className="text-gray-300 font-thin text-3xl transition-all hover:text-gray-500">Projects</span>
-        <span className="text-gray-300 font-thin text-3xl">|</span>
-        <span onClick={onToolsClick} className="text-gray-300 font-thin text-3xl transition-all hover:text-gray-500">Tools</span>
-        <span className="text-gray-300 font-thin text-3xl">|</span>
-        <span onClick={onContactClick} className="text-gray-300 font-thin text-3xl transition-all hover:text-gray-500">Contact</span>
+      <div className="hidden lg:flex gap-3">
+        <span onClick={onAboutClick} className="text-gray-300 font-sans text-xl transition-all hover:text-gray-500">About</span>
+        <span onClick={onProjectsClick} className="text-gray-300 font-sans text-xl transition-all hover:text-gray-500">Projects</span>
+        <span onClick={onToolsClick} className="text-gray-300 font-sans text-xl transition-all hover:text-gray-500">Tools</span>
+        <span onClick={onContactClick} className="text-gray-300 font-sans text-xl transition-all hover:text-gray-500">Contact</span>
       </div>
 
       {/* Button (visible below md) */}
       <button 
         onClick={onMenuButtonClick} 
-        className="md:hidden text-white text-4xl p-2 rounded-md hover:bg-zinc-700 focus:ring-2 focus:ring-white transition-all"
+        className="lg:hidden text-white text-4xl p-2 rounded-md hover:bg-zinc-700 focus:ring-2 focus:ring-white transition-all"
         aria-label="Toggle menu"
       >
         ///

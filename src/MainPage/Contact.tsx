@@ -24,7 +24,7 @@ export default function Contact({ ref }: ContactProps) {
                 Start a Conversation
             </a>
 
-            <p className="text-2xl text-zinc-300">Or reach out on LinkedIn</p>
+            <p className="text-2xl text-zinc-300">Or reach out to me here</p>
 
             <a
                 href="https://www.linkedin.com/in/miguel-frias-919998222/"

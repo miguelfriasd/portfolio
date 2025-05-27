@@ -1,9 +1,9 @@
 import { Ref } from 'react';
 import About from './About';
 import Intro from './Intro';
-import Tools from './ToolsSection/Tools';
+import Tools from './ToolsSection';
 import Contact from './Contact';
-import Projects from './Projects';
+import Projects from './ProjectsSection';
 
 interface MainPageProps{
     aboutRef: Ref<HTMLDivElement> | undefined;
@@ -17,7 +17,7 @@ export default function MainPage({aboutRef, projectsRef, handleAboutClick, tools
 
     return(
         <div className='min-h-screen bg-zinc-800'>
-            <div className='flex flex-col justify-center items-center xl:mx-40 mx-20 space-y-45'>
+            <div className='flex flex-col justify-center items-center lg:mx-40 mx-30 space-y-35'>
                 <Intro handleNext={handleAboutClick}/>
                 <About ref={aboutRef}/>   
                 <Projects ref={projectsRef}/>

@@ -9,8 +9,8 @@ interface ToolsProps{
 export default function Tools({ ref }: ToolsProps) {
 
   return (
-    <section ref={ref} className="w-full flex flex-col justify-center items-center pt-20">
-        <h1 className="text-center text-zinc-300 text-5xl md:text-6xl font-sans font-extrabold leading-tight mb-20">
+    <section ref={ref} className="w-full flex flex-col justify-center items-center pt-25">
+        <h1 className="text-center text-zinc-200 text-5xl md:text-6xl font-sans font-extrabold leading-tight mb-20">
             My toolbox
         </h1>
         <div className='w-full flex justify-around flex-wrap'>
