@@ -17,7 +17,7 @@ const About = forwardRef<HTMLElement>((_props, ref) => {
                About Me
             </h1>
             <div className="flex flex-col lg:flex-row gap-12 items-center">
-                <div className="text-zinc-300 text-md lg:text-lg font-light mb-5 space-y-4">
+                <div className="text-zinc-300 text-lg lg:text-xl font-sans mb-5 space-y-4">
                     <p>
                         I'm a 23-year-old developer based in Sonora, México, recently graduated from Instituto Tecnológico de Sonora with a degree in Software Engineering. Over the past four years, I’ve focused primarily on backend development, working on several academic and personal projects.
                     </p>

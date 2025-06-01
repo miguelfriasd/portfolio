@@ -9,8 +9,8 @@ export default function ProjectCardContent({
   return (
     <>
       <div>
-        <h1 className="font-bold text-xl mb-2">{title}</h1>
-        <p className="text-zinc-200">{body}</p>
+        <h1 className="font-bold lg:text-2xl text-xl mb-4">{title}</h1>
+        <p className="text-zinc-200 font-sans lg:text-xl text-lg">{body}</p>
       </div>
       <div className="flex flex-row items-center mt-4 text-xs font-bold justify-between flex-wrap gap-2">
         <div className="flex flex-row flex-wrap gap-3">

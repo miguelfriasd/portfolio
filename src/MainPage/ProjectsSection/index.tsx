@@ -17,7 +17,7 @@ const Projects = forwardRef<HTMLElement>((_props, ref) => {
             initial={{ opacity: 0 }}
             viewport={{once: true}}
         >
-            <h1 className="text-zinc-200 text-5xl lg:text-6xl font-sans font-extrabold leading-tight" >Projects</h1>            
+            <h1 className="text-zinc-200 text-5xl lg:text-6xl font-sans font-extrabold leading-tight" >Recent Projects</h1>            
             <ProjectCard 
                 type="left"
                 title="Personal Portfolio" 
@@ -29,21 +29,21 @@ const Projects = forwardRef<HTMLElement>((_props, ref) => {
             <ProjectCard
                 type="right"
                 title="Attendance Control App" 
-                body="I developed an attendance control app for one of my professors at ITSON to streamline and simplify the student check-in process. The app uses Bluetooth to scan for nearby devices and automatically registers a student's attendance when their phone is detected." 
+                body="An attendance control app for one of my professors at ITSON, to streamline and simplify the student check-in process. The app uses Bluetooth to scan for nearby devices and automatically registers a student's attendance when their phone is detected." 
                 tags={['Kotlin', 'SQLite']} 
                 image_url={Attendance}
             />
             <ProjectCard 
                 type="left"
                 title="Macrocycle Management Web App" 
-                body="I developed a web application for ITSON’s sports complex to track athlete performance across each macrocycle. The application facilitates planning by calculating and registering individualized macrocycle plans for each of the school’s sports"
+                body="A web application for ITSON’s sports complex to track athlete performance across each macrocycle. The application facilitates planning by calculating and registering individualized macrocycle plans for each of the school’s sports"
                 tags={['Typescript', 'PostgreSQL']} 
                 image_url={Sports} 
             />
             <ProjectCard
                 type="right"
                 title="Sales Management System" 
-                body="I developed a desktop sales management system for a local water purification company. The system registers inventory, tracks product sales, and generates sales reports." 
+                body="A desktop sales management system developed for a local water purification company, with features for inventory control, sales tracking, and report generation." 
                 tags={['Java', 'MySQL']} 
                 image_url={Computer}
             />
