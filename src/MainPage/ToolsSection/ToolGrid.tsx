@@ -1,4 +1,5 @@
-import { ReactNode, Children } from "react";
+import { ReactNode, Children} from "react";
+import { motion} from "framer-motion";
 
 interface ToolGridProps{
     title: string,
@@ -6,29 +7,40 @@ interface ToolGridProps{
     rowSize: number;
 }
 
-export default function ToolGrid({title, children, rowSize}: ToolGridProps){
-    
-    const rowList: ReactNode[][] = [];
+export default function ToolGrid({ title, children, rowSize }: ToolGridProps) {
 
-    Children.forEach(children, (child, index) => {
-        if(index === 0 || index % rowSize === 0){
-            rowList.push([child]);
-            return;
-        }
-        rowList[rowList.length - 1].push(child);
-    })
+  const childArray = Children.toArray(children);
+  const rows: ReactNode[][] = [];
 
-    return( 
-        <div className='flex flex-col items-center mb-5'>
-            <h2 className='text-3xl font-sans leading-tight font-bold text-zinc-300 mb-10'>{title}</h2>
+  for (let i = 0; i < childArray.length; i += rowSize) {
+    rows.push(childArray.slice(i, i + rowSize));
+  }
 
-            {rowList.map(row => {
-                return (
-                    <div className="flex flex-wrap">
-                        {...row}
-                    </div>
-                )
-            })}
-        </div>
-    )
+  return (
+    <motion.div
+      className="flex flex-col items-center mb-5"
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 2, ease: "easeInOut" }}
+      initial={{ opacity: 0 }}
+      viewport={{once: true}}
+      aria-labelledby="tool-grid-heading"
+    >
+      <h2 id="tool-grid-heading" className="text-2xl lg:text-3xl font-sans leading-tight font-bold text-zinc-300 mb-10">
+        {title}
+      </h2>
+
+      {rows.map((row, i) => (
+        <motion.div
+          key={i}
+          className="flex flex-wrap mb-4"
+          initial={{opacity: 0}}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 2, ease: "easeInOut" }}
+        >
+          {row}
+        </motion.div>
+      ))}
+    </motion.div>
+  );
 }

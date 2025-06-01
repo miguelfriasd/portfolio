@@ -3,6 +3,7 @@ import {useEffect, useState, useCallback, useRef} from 'react';
 import Header from './Header';
 import SidebarMenu from './SidebarMenu';
 import MainPage from './MainPage/';
+import Footer from './footer';
 
 function App() {
     const [showSidebarMenu, setShowSidebarMenu] = useState(false);
@@ -74,7 +75,7 @@ function App() {
     }, []);
 
     return (
-        <div>
+        <div className='bg-zinc-800'>
             <MainPage 
                 aboutRef={aboutRef} 
                 projectsRef={projectsRef} 
@@ -82,7 +83,15 @@ function App() {
                 contactRef={contactRef} 
                 handleAboutClick={handleAboutClick}
             />
-            {showSidebarMenu && <SidebarMenu onClose={handleMenuClose} />}
+            <SidebarMenu 
+                isVisible={showSidebarMenu} 
+                handleClose={handleMenuClose} 
+                onAboutClick={handleAboutClick} 
+                onProjectsClick={handleProjectsClick} 
+                onToolsClick={handleToolsClick} 
+                onContactClick={handleContactClick} 
+                onLogoClick={handleLogoClick} 
+            />
             <Header 
                 onAboutClick={handleAboutClick} 
                 onProjectsClick={handleProjectsClick} 
@@ -91,6 +100,7 @@ function App() {
                 onLogoClick={handleLogoClick} 
                 onMenuButtonClick={handleMenuButtonClick} 
             />
+            <Footer/>
             {/* Cursor element */}
             <div ref={cursorRef} className="cursor-trail"></div>
         </div>
