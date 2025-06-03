@@ -13,7 +13,7 @@ export default function Header({ onMenuButtonClick, onLogoClick, onAboutClick, o
             {/* Right side container */}
             <div className="ml-auto flex items-center gap-3">
               {/* Menu spans (visible on md+) */}
-              <div className="hidden lg:flex gap-3">
+              <div className="hidden md:flex gap-3">
                 <span onClick={onAboutClick} className="cursor-pointer text-gray-300 font-sans text-xl transition-all hover:text-gray-500">About</span>
                 <span onClick={onProjectsClick} className="cursor-pointer text-gray-300 font-sans text-xl transition-altrue hover:text-gray-500">Projects</span>
                 <span onClick={onToolsClick} className="cursor-pointer text-gray-300 font-sans text-xl transition-all hover:text-gray-500">Tools</span>
@@ -23,7 +23,7 @@ export default function Header({ onMenuButtonClick, onLogoClick, onAboutClick, o
                 {/* Button (visible below md) */}
                 <div 
                   onClick={onMenuButtonClick}
-                  className="cursor-pointer lg:hidden w-14 h-14 rounded-full bg-transparent hover:bg-zinc-700 focus:ring-2 focus:ring-white transition-all flex items-center justify-center"
+                  className="cursor-pointer md:hidden w-14 h-14 rounded-full bg-transparent hover:bg-zinc-700 focus:ring-2 focus:ring-white transition-all flex items-center justify-center"
                   aria-label="Toggle menu"
                 >
                   <img 

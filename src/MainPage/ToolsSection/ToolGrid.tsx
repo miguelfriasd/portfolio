@@ -18,21 +18,21 @@ export default function ToolGrid({ title, children, rowSize }: ToolGridProps) {
 
   return (
     <motion.div
-      className="flex flex-col items-center mb-5"
+      className="flex xl:w-1/3 lg:w-1/2 flex-col items-center"
       whileInView={{ opacity: 1 }}
       transition={{ duration: 2, ease: "easeInOut" }}
       initial={{ opacity: 0 }}
       viewport={{once: true}}
       aria-labelledby="tool-grid-heading"
     >
-      <h2 id="tool-grid-heading" className="text-2xl lg:text-3xl font-sans leading-tight font-bold text-zinc-300 mb-10">
+      <h2 id="tool-grid-heading" className= "xl:text-4xl lg:text-3xl text-4xl font-thin leading-tight font-bold text-zinc-300 mb-10">
         {title}
       </h2>
 
       {rows.map((row, i) => (
         <motion.div
           key={i}
-          className="flex flex-wrap mb-4"
+          className="flex w-full flex-wrap justify-around"
           initial={{opacity: 0}}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

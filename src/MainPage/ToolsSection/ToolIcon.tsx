@@ -26,7 +26,7 @@ export default function ToolIcon({ imgSrc, iconName, displayName }: ToolIconProp
 
   return (
     <motion.div
-      className="group flex flex-col rounded-lg p-3 mx-2 my-1 bg-zinc-800"
+      className="group flex flex-col rounded-lg mx-2 my-1 bg-zinc-800"
       aria-labelledby={labelId}
       aria-label={displayName}
       variants={containerVariants}
@@ -38,7 +38,7 @@ export default function ToolIcon({ imgSrc, iconName, displayName }: ToolIconProp
         <motion.img
           src={imgSrc}
           alt={displayName}
-          className="w-24 h-24 mb-2"
+          className="w-24 h-24 mb-3"
           variants={imageAndIconVariants}
         />
       )}
@@ -50,12 +50,19 @@ export default function ToolIcon({ imgSrc, iconName, displayName }: ToolIconProp
         />
       )}
       <motion.span
-        className="text-center text-zinc-300"
+        className="hidden lg:block text-center text-zinc-300"
         id={labelId}
         variants={labelVariants}
       >
         {displayName}
       </motion.span>
+
+      <span
+        className="block lg:hidden text-center text-zinc-300"
+        id={labelId}
+      >
+        {displayName}
+      </span>
     </motion.div>
   );
 }

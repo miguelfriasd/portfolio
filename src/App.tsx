@@ -102,7 +102,7 @@ function App() {
             />
             <Footer/>
             {/* Cursor element */}
-            <div ref={cursorRef} className="cursor-trail"></div>
+            <div ref={cursorRef} className="hidden lg:block cursor-trail"></div>
         </div>
     );
 }

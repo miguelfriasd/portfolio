@@ -16,7 +16,7 @@ interface MainPageProps{
 export default function MainPage({aboutRef, projectsRef, handleAboutClick, toolsRef, contactRef}: MainPageProps){
 
     return(
-        <div className='flex flex-col justify-center items-center lg:mx-40 mx-30 space-y-25'>
+        <div className='flex flex-col justify-center items-center mx-10 md:mx-40 sm:mx-20 space-y-25'>
             <Intro handleNext={handleAboutClick}/>
             <About ref={aboutRef}/>   
             <Projects ref={projectsRef}/>
