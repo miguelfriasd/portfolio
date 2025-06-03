@@ -11,13 +11,13 @@ const Projects = forwardRef<HTMLElement>((_props, ref) => {
     return(
         <motion.section 
             ref={ref}
-            className="flex flex-col items-center w-full gap-12 pt-45"
+            className="flex flex-col items-center w-full gap-12 pt-24 lg:pt-45"
             whileInView={{ opacity: 1 }}
             transition={{ duration: 2, ease: "easeInOut" }}
             initial={{ opacity: 0 }}
             viewport={{once: true}}
         >
-            <h1 className="text-zinc-200 text-5xl lg:text-6xl font-sans font-extrabold leading-tight" >Recent Projects</h1>            
+            <h1 className="text-zinc-200 text-4xl lg:text-6xl sm:text-5xl font-sans font-extrabold leading-tight" >Recent Projects</h1>            
             <ProjectCard 
                 type="left"
                 title="Personal Portfolio" 

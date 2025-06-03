@@ -32,7 +32,7 @@ const Contact = forwardRef<HTMLElement>((_props, ref) => {
   return (
     <motion.section
       ref={ref}
-      className="w-full mb-20 flex flex-col items-center justify-center space-y-12 pt-24 sm:pt-32 px-4"
+      className="w-full mb-20 flex flex-col items-center justify-center sm:space-y-12 space-y-9 pt-24 lg:pt-45"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.3 }}
@@ -41,7 +41,7 @@ const Contact = forwardRef<HTMLElement>((_props, ref) => {
     >
       <motion.h1
         id="contact-heading"
-        className="text-zinc-200 text-5xl lg:text-6xl font-sans font-extrabold leading-tight"
+        className="text-zinc-200 text-4xl lg:text-6xl sm:text-5xl font-sans font-extrabold leading-tight"
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2 }}
@@ -50,7 +50,7 @@ const Contact = forwardRef<HTMLElement>((_props, ref) => {
       </motion.h1>
 
       <motion.p
-        className="text-xl lg:text-2xl text-zinc-300 text-center"
+        className="text-lg lg:text-2xl sm:text-xl text-zinc-300 text-center"
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.4 }}

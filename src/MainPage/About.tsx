@@ -13,11 +13,11 @@ const About = forwardRef<HTMLElement>((_props, ref) => {
             initial={{ opacity: 0 }}
             viewport={{once: true}}
         >
-            <h1 className="text-zinc-200 text-5xl lg:text-6xl font-sans font-extrabold leading-tight">
+            <h1 className="text-zinc-200 text-4xl lg:text-6xl sm:text-5xl font-sans font-extrabold leading-tight">
                About Me
             </h1>
             <div className="flex flex-col lg:flex-row gap-12 items-center">
-                <div className="text-zinc-300 text-lg lg:text-xl font-sans mb-5 space-y-4">
+                <div className="text-zinc-300 text-md lg:text-xl sm:text-lg font-sans mb-5 space-y-4">
                     <p>
                         I'm a 23-year-old developer based in Sonora, México, recently graduated from Instituto Tecnológico de Sonora with a degree in Software Engineering. Over the past four years, I’ve focused primarily on backend development, working on several academic and personal projects.
                     </p>

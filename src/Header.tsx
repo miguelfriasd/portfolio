@@ -6,7 +6,7 @@ export default function Header({ onMenuButtonClick, onLogoClick, onAboutClick, o
 
     return (
         <header className="z-1 fixed top-0 w-full h-20 bg-zinc-800 shadow-md">
-          <div className="w-screen h-1 bg-gradient-to-r from-teal-300 to-blue-600"></div>
+          <div className="w-full h-1 bg-gradient-to-r from-teal-300 to-blue-600"></div>
           <nav className="flex items-center justify-between px-6 h-full">
             <img onClick={onLogoClick} className="cursor-pointer w-22 h-auto" src={Logo} alt="Logo" />
 

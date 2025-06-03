@@ -8,14 +8,14 @@ const Tools = forwardRef<HTMLElement>((_props, ref) => {
   return (
         <motion.section 
             ref={ref}
-            className='w-full flex flex-col justify-center items-center pt-45'
+            className='w-full flex flex-col justify-center items-center pt-24 lg:pt-45'
             whileInView={{ opacity: 1 }}
             transition={{ duration: 2, ease: "easeInOut" }}
             initial={{ opacity: 0 }}
             viewport={{once: true}}
             aria-labelledby="section-heading"
         >
-            <h1 id="section-heading" className="text-center mx-auto text-zinc-200 text-5xl lg:text-6xl font-sans font-extrabold leading-tight mb-20">
+            <h1 id="section-heading" className="text-center mx-auto text-zinc-200 text-4xl lg:text-6xl sm:text-5xl font-sans font-extrabold leading-tight mb-20">
                 My Toolbox
             </h1>
             <div className="w-full flex flex-col lg:flex-row justify-around flex-wrap gap-y-12">

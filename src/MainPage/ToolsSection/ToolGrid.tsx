@@ -25,7 +25,7 @@ export default function ToolGrid({ title, children, rowSize }: ToolGridProps) {
       viewport={{once: true}}
       aria-labelledby="tool-grid-heading"
     >
-      <h2 id="tool-grid-heading" className= "xl:text-4xl lg:text-3xl text-4xl font-thin leading-tight font-bold text-zinc-300 mb-10">
+      <h2 id="tool-grid-heading" className= "xl:text-4xl lg:text-3xl text-3xl font-thin leading-tight font-bold text-zinc-300 mb-10">
         {title}
       </h2>
 

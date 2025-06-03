@@ -10,7 +10,7 @@ export default function ProjectCardContent({
     <>
       <div>
         <h1 className="font-bold lg:text-2xl text-xl mb-4">{title}</h1>
-        <p className="text-zinc-200 font-sans lg:text-xl text-lg">{body}</p>
+        <p className="text-zinc-200 font-sans text-base lg:text-xl sm:text-lg">{body}</p>
       </div>
       <div className="flex flex-row items-center mt-4 text-xs font-bold justify-between flex-wrap gap-2">
         <div className="flex flex-row flex-wrap gap-3">
@@ -21,13 +21,13 @@ export default function ProjectCardContent({
           ))}
         </div>
         {repository_url && (
-          <a
+        <a
             href={repository_url}
             className="p-2 rounded-lg bg-white text-zinc-800 hover:bg-zinc-100 transition"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Source code on GitHub"
-          >
+        >
             <div className="flex items-center gap-1">
               <span>Source Code</span>
               <img
@@ -36,7 +36,7 @@ export default function ProjectCardContent({
                 alt="GitHub"
               />
             </div>
-          </a>
+        </a>
         )}
       </div>
     </>
