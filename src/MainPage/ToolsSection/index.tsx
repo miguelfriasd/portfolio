@@ -36,6 +36,7 @@ const Tools = forwardRef<HTMLElement>((_props, ref) => {
                 <ToolGrid title='Frameworks & Libraries' rowSize={2}>
                     <ToolIcon imgSrc='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' displayName='React'/>
                     <ToolIcon imgSrc='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg' displayName='TailwindCSS'/>
+                    <ToolIcon iconName='devicon-nextjs-plain' displayName='Next.js'/>
                     <ToolIcon iconName='devicon-express-original' displayName='Express'/>
                 </ToolGrid>
             </div>

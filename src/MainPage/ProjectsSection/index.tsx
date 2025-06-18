@@ -1,5 +1,6 @@
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
+import Dashboard from "@assets/dashboard.png"
 import Portfolio from "@assets/portfolio.png"
 import Computer from "@assets/computer.jpg"
 import Sports from "@assets/sports.jpg"
@@ -18,6 +19,13 @@ const Projects = forwardRef<HTMLElement>((_props, ref) => {
             viewport={{once: true}}
         >
             <h1 className="text-zinc-200 text-4xl lg:text-6xl sm:text-5xl font-sans font-extrabold leading-tight" >Recent Projects</h1>            
+            <ProjectCard 
+                type="right"
+                title="Sales Dashboard Web Application" 
+                body="I am currently working on a sales dashboard web application for a local business. The idea is to provide a centralized platform to track invoices and manage customer information. The dashboard allows the business to view outstanding and paid invoices, monitor customer payment history, and generate basic financial summaries." 
+                tags={['Typescript', 'Next.js', 'PostgreSQL']} 
+                image_url={Dashboard} 
+            />
             <ProjectCard 
                 type="left"
                 title="Personal Portfolio" 
