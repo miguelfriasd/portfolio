@@ -114,6 +114,7 @@ const Contact = forwardRef<HTMLElement>((_props, ref) => {
 
       <p className="text-sm text-zinc-400 text-center">
         Based in Sonora, México, UTC-7 — I typically respond within 24 hours.<br />
+        My phone number is: +52 644 1456102 <br/ >
         Or email me directly at <span className="underline">miguelangelfriasduran@gmail.com</span>
       </p>
     </motion.section>
