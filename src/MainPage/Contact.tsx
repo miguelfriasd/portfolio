@@ -95,7 +95,7 @@ const Contact = forwardRef<HTMLElement>((_props, ref) => {
 
       <div className="flex space-x-6 text-5xl">
         <a
-          href="https://www.linkedin.com/in/miguel-frias-919998222/"
+          href="https://www.linkedin.com/in/miguel-frias-34b933329/"
           aria-label="LinkedIn"
           target="_blank"
           rel="noreferrer"
@@ -113,8 +113,7 @@ const Contact = forwardRef<HTMLElement>((_props, ref) => {
       </div>
 
       <p className="text-sm text-zinc-400 text-center">
-        Based in Sonora, México, UTC-7 — I typically respond within 24 hours.<br />
-        My phone number is: +52 644 1456102 <br/ >
+        Based in Sonora, México, UTC-7 — I typically respond within 24 hours.
         Or email me directly at <span className="underline">miguelangelfriasduran@gmail.com</span>
       </p>
     </motion.section>
